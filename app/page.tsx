@@ -1,4 +1,4 @@
-import CarList from "./components/carList";
+import CarList from "./components/CarList";
 
 import { cars } from "./mocks/cars";
 
