@@ -1,3 +1,11 @@
+import CarList from "./components/CarList";
+
+import { cars } from "./mocks/cars";
+
 export default function Home() {
-  return <main className="flex min-h-screen flex-col items-center justify-between p-24">Hello Jet</main>;
+  return (
+    <main className="pt-6 px-4 pb-4 lg:p-8">
+      <CarList cars={cars} />
+    </main>
+  );
 }
