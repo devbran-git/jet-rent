@@ -4,16 +4,30 @@ interface ReservationProps {
 
 export default function Reservation({ nextReservation }: ReservationProps) {
   return (
-    <>
-      <p className="text-xs text-gray-500 lg:hidden">
-        Next reservation:{" "}
+    <div className="flex items-center text-xs text-gray-500 lg:text-sm">
+      <span className="mr-1 lg:hidden">Next reservation: </span>
+
+      <span className="lg:hidden">
         {nextReservation.toLocaleDateString("pt-BR", {
           month: "numeric",
           day: "numeric",
         })}
-      </p>
+      </span>
 
-      <p className="hidden text-sm text-gray-500 lg:block">Jul 6 - Jul 12</p>
-    </>
+      <span className="hidden lg:block">
+        {new Date().toLocaleDateString("en-US", {
+          month: "short",
+          day: "numeric",
+        })}{" "}
+        -{" "}
+      </span>
+
+      <span className="hidden lg:block">
+        {nextReservation.toLocaleDateString("en-US", {
+          month: "short",
+          day: "numeric",
+        })}
+      </span>
+    </div>
   );
 }

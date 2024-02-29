@@ -64,6 +64,7 @@ export default function CarList({ cars }: CarListProps) {
           <div className="flex gap-5 py-2" key={car.id}>
             <div className="relative">
               <CarPhoto {...car} />
+              <Availability isAvailable={car.available} />
             </div>
 
             <div className="flex items-start justify-between w-full">
