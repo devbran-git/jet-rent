@@ -46,7 +46,7 @@ export const cars = [
     name: "Mini Cooper 2020",
     photo: car,
     next_reservation: new Date("1988-7-11"),
-    available: true,
-    rating: 5,
+    available: false,
+    rating: 4,
   },
 ];
