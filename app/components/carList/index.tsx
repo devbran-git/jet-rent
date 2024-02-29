@@ -32,9 +32,9 @@ export default function CarList({ cars }: CarListProps) {
           </tr>
         </thead>
 
-        {cars.map((car) => (
-          <tbody key={car.id}>
-            <tr>
+        <tbody>
+          {cars.map((car) => (
+            <tr key={car.id}>
               <td className="max-w-[287px] pl-4 py-2">
                 <CarPhoto {...car} />
               </td>
@@ -55,8 +55,8 @@ export default function CarList({ cars }: CarListProps) {
                 <Image className="ml-auto mr-7" src={kebab} alt="Ver opções" />
               </td>
             </tr>
-          </tbody>
-        ))}
+          ))}
+        </tbody>
       </table>
 
       <div className="flex flex-col h-full divide-y divide-gray-200 lg:hidden">
